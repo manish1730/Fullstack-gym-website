@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PowerFit Gym</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div id="progress-bar"></div>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="logo">Power<span>Fit</span></div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#programs">Programs</a>
+    <a href="#trainers">Trainers</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <a href="login.html" class="btn login-btn" id="loginlink">Login</a>
+    <button class="btn login-btn" id="logoutBtn" style="display:none;">Logout</button>
+    <button id="themeToggle">🌙</button>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-content animate">
+    <h1>Build Your <span>Best Body</span></h1>
+    <p>Train harder, get stronger, live healthier.</p>
+    <a href="#pricing" class="btn">Join Now</a>
+  </div>
+</section>
+
+<!-- Programs -->
+<section class="section" id="programs">
+  <h2 class="section-title">Our Programs</h2>
+  <div class="program-grid">
+    <div class="card animate">Weight Training</div>
+    <div class="card animate">Cardio</div>
+    <div class="card animate">CrossFit</div>
+    <div class="card animate">Yoga</div>
+  </div>
+</section>
+
+<!-- Trainers -->
+<section class="section" id="trainers">
+  <h2 class="section-title">Expert Trainers</h2>
+  <div class="trainer-grid">
+    <div class="trainer-card animate">
+      <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883" alt="">
+      <div class="overlay">John Doe</div>
+    </div>
+    <div class="trainer-card animate">
+      <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07c" alt="">
+      <div class="overlay">Emma Stone</div>
+    </div>
+  </div>
+</section>
+<!-- your pakeage -->
+<section class="section" id="userPlan" style="display:none;">
+  <h2 class="section-title">Your Active Plan</h2>
+  <div class="price-card">
+    <h3 id="userPlanName"></h3>
+    <p id="userPlanPrice"></p>
+    <p>Status: <span id="userPlanStatus"></span></p>
+  </div>
+</section>
+
+
+<!-- Pricing -->
+<section class="section" id="pricing">
+  <h2 class="section-title">Pricing Plans</h2>
+  <div class="pricing-grid">
+    <div class="price-card animate">
+      <h3>Monthly</h3>
+      <p>₹999</p>
+      <button class="btn select-plan" 
+      data-plan="Monthly"
+      data-price="999">Select</button>
+    </div>
+    <div class="price-card popular animate">
+      <h3>Quarterly</h3>
+      <p>₹2499</p>
+      <button class="btn select-plan"
+      data-plan="Quarterly"
+      data-price="2499">Best Value</button>
+    </div>
+    <div class="price-card animate">
+      <h3>Annual</h3>
+      <p>₹8999</p>
+      <button class="btn select-plan"
+      data-plan="Annual"
+      data-price="8999">Select</button>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section">
+  <h2 class="section-title">What Members Say</h2>
+  <div class="testimonial" id="testimonial">
+    <p>"Best gym experience I've ever had!"</p>
+    <span>- Alex</span>
+  </div>
+</section>
+
+<!-- BMI Calculator -->
+<section class="section">
+  <h2 class="section-title">BMI Calculator</h2>
+  <div class="bmi-box">
+    <input type="number" id="height" placeholder="Height (cm)">
+    <input type="number" id="weight" placeholder="Weight (kg)">
+    <button class="btn" onclick="calculateBMI()">Calculate</button>
+    <p id="bmiResult"></p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <form id="contactForm" class="contact-form animate">
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <textarea id="message" placeholder="Message"></textarea>
+    <button class="btn">Send</button>
+  </form>
+</section>
+
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 PowerFit Gym. All rights reserved.</p>
+</footer>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

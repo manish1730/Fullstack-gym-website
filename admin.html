@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | PowerFit Gym</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Optional basic styling -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      padding: 40px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .plan-card {
+      background: #1a1a1a;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .plan-card button {
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: #00ff6a;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Admin Dashboard</h2>
+
+  <p>Pending Membership Requests</p>
+
+  <!-- Plans will be injected here -->
+  <div id="adminPlans"></div>
+
+  <!-- Admin Script -->
+  <script type="module" src="admin.js"></script>
+
+</body>
+</html>

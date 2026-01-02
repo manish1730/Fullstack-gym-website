@@ -1,0 +1,261 @@
+:root {
+  --bg: #0d0d0d;
+  --text: #ffffff;
+  --accent: #00ff6a;
+  --card: #1a1a1a;
+}
+
+.light {
+  --bg: #f4f4f4;
+  --text: #111;
+  --card: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Progress Bar */
+#progress-bar {
+  height: 4px;
+  width: 0;
+  background: var(--accent);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 100;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-links a {
+  margin: 0 10px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--text);
+  margin: 5px 0;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+  url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content span {
+  color: var(--accent);
+}
+
+.btn {
+  padding: 10px 25px;
+  background: var(--accent);
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px var(--accent);
+}
+
+/* Sections */
+.section {
+  padding: 80px 10%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Cards */
+.program-grid,
+.pricing-grid,
+.trainer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.card,
+.price-card {
+  background: var(--card);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover,
+.price-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,255,106,0.3);
+}
+
+.popular {
+  border: 2px solid var(--accent);
+}
+
+/* Trainers */
+.trainer-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.trainer-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.trainer-card:hover .overlay {
+  opacity: 1;
+}
+
+/* BMI */
+.bmi-box {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.bmi-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Contact */
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Animations */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    background: var(--bg);
+    flex-direction: column;
+    width: 200px;
+    transition: 0.3s;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+.login-btn {
+  padding: 6px 18px;
+  font-size: 14px;
+}
+.auth-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.auth-card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.auth-card a {
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: none;
+}
